@@ -1,0 +1,17 @@
+git clone git@gitgub.com:user/repo.git
+git checkout -b issue-xx
+<<ไปแก้ไฟล์ add/delete>>
+	ใช้คำสั่ง explorer . เปิดไฟล์ได้เลย
+git add ไฟล์ 
+git commit -m "close #xx - comment"
+<< ถ้า commit ไม่ได้ ให้ config ก่อน >>
+	git config --global user.name "Username ใน git"
+	git config --global user.email "Mail ที่ใช้ใน git "
+git checkout master	
+git remote update
+git pull
+git checkout issue-xx
+git rebase master
+git checkout master
+git merge issue-xx --no-ff
+git push
